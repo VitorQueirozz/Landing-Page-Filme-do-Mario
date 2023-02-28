@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;   
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#back {
+    background: rgba(0, 0, 0, 0.9) url(imagens/imagens/supermario.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    user-select: none;
+}
+
+.fundo-video {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    height: 100vh;
+}
+
+.fundo-video::after {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 500px;
+    padding: 30px 0px;
+}
+
+.logo {
+    width: 60px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav > a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+nav > a:hover {
+    cursor: pointer;
+    background-color: red;
+    transition: 0.5s;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 80px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 650px;
+}
+
+.titulo {
+    width: 500px;
+
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.705);
+}
+
+.botao {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    Width: 170px;
+    padding: 15px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.3s all ease-in-out;
+}
+
+.botao:hover {
+    background-color: rgb(223, 25, 25);
+}
+
+.botao:active {
+    transform: scale(1.1);
+}
+
+.mario {
+    width: 600px;
+}
+
+.modal {
+    background-color: rgba(52,52,50,0.749);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;   /* TIra / Esconde */
+}
+
+.conteudo-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    height: 100vh;
+}
+
+.fechar-modal {
+    background-color: rgba(255, 255, 255, 0.911);
+    color: red;
+    text-align: center;
+    width: 35px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.568);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal.aberto {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1320px) {
+    article {
+        width: 500px;
+    }
+
+    .mario {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .titulo {
+        width: 400px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    article {
+        width: 450px;
+    }
+
+    .mario {
+        width: 450px;
+    }
+}
+@media screen and (max-width: 960px) {
+    main {
+        flex-direction: column;
+        gap: 100px;
+    }
+    
+    header {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .mario {
+        display: none;
+    }
+
+
+    main {
+        padding: 0 0px 0 10px;
+    }
+    
+    .titulo {
+        width: 320px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .modal iframe {
+        width: 400px;
+        height: 225px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .modal iframe {
+        width: 328px;
+        height: 185px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    main {
+        padding: 0 0px 0 10px;
+    }
+    
+    .titulo {
+        width: 300px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
